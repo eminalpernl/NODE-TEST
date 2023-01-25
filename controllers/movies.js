@@ -47,7 +47,7 @@ export const addMovie = (req, res)=>{
     }
 
     if (!checker(checkTruth)) {
-        return res.status(400).json({ msg: 'Please valid data' });
+        return res.status(400).json({ msg: 'Please input valid data' });
     }
 
 
@@ -74,7 +74,6 @@ if (found) {
     res.status(400).json({ msg: `No movie with this ID of ${id}` })
 }};
 
-
 export const updateMovie = (req, res) => {
     const id = req.params.id;
     const { tittle, director, release_date } = req.body;
@@ -88,6 +87,6 @@ export const updateMovie = (req, res) => {
 
 
 
-    res.send(`movie with the ${id} updated`)
+    res.send(`movie with the id: ${id} updated`)
 
 }

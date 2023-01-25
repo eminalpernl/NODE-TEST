@@ -1,9 +1,6 @@
 import express from "express";
-//const express = require('express');
 import moviesRouts from "./routes/movies.js"
-//const moviesRouts = require('./routes/movies.js');
 import bodyParser from "body-parser";
-//const bodyParser = require('body-parser')
 
 const app = express()
 const port = 3000;
