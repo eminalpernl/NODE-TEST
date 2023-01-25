@@ -73,3 +73,21 @@ if (found) {
 } else {
     res.status(400).json({ msg: `No movie with this ID of ${id}` })
 }};
+
+
+export const updateMovie = (req, res) => {
+    const id = req.params.id;
+    const { tittle, director, release_date } = req.body;
+
+    const movie = movies.find((movie) => movie.id == id);
+    
+
+    if (tittle) movie.tittle = tittle;
+    if (director) movie.director = director;
+    if (release_date) movie.release_date = release_date;
+
+
+
+    res.send(`movie with the ${id} updated`)
+
+}
